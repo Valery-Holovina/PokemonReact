@@ -1,0 +1,17 @@
+.message {
+  margin: 25px 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  text-align: center;
+  background: var(--panel);
+}
+
+.message strong { font-size: 18px; }
+.message p { margin: 7px 0 0; color: var(--muted); }
+
+.error {
+  color: #ff91a9;
+  border-color: rgba(255, 91, 126, 0.45);
+  background: rgba(255, 91, 126, 0.08);
+}

@@ -1,0 +1,130 @@
+
+.app {
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text);
+  transition: background 0.25s, color 0.25s;
+}
+
+.main {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 55px 0 75px;
+}
+
+.hero {
+  min-height: 330px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  align-items: center;
+  gap: 50px;
+}
+
+.eyebrow {
+  color: var(--yellow);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 700px;
+  margin: 15px 0;
+  font-size: clamp(45px, 7vw, 78px);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.hero h1 em {
+  color: var(--yellow);
+  font-style: normal;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.heroArt {
+  width: 260px;
+  height: 260px;
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  border: 26px solid var(--violet);
+  border-radius: 50%;
+  background: linear-gradient(
+    #ff5b6e 0 46%,
+    #252740 46% 54%,
+    #f7f7fb 54%
+  );
+  box-shadow: 0 30px 80px rgba(97, 65, 255, 0.3);
+  transform: rotate(-10deg);
+}
+
+.heroArt span {
+  color: #252740;
+  font-size: 40px;
+  font-weight: 1000;
+}
+
+.errorBox {
+  margin: 20px 0;
+}
+
+.retryButton {
+  display: block;
+  margin: 0 auto;
+  padding: 13px 24px;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: #e34d70;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.retryButton:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.catalogInfo {
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer {
+  padding: 30px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-bottom: 25px;
+  }
+
+  .heroArt {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .main {
+    padding-top: 35px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+}
